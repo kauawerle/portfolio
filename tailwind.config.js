@@ -16,6 +16,19 @@ module.exports = {
       "6xl": ["3rem", { lineHeight: "3.5rem" }],
       "7xl": ["4rem", { lineHeight: "4.5rem" }],
     },
+    backgroundPosition: {
+      bottom: 'bottom',
+      'bottom-4': 'center bottom 1rem',
+      center: 'center',
+      left: 'left',
+      'left-bottom': 'left bottom',
+      'left-top': 'left top',
+      right: 'right',
+      'right-bottom': 'right bottom',
+      'right-top': 'right top',
+      top: 'top',
+      'top-4': 'center top 1rem',
+    },
     extend: {
       borderRadius: {
         "4xl": "2.5rem",
@@ -24,6 +37,11 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-helvetica)"],
       },
+      colors: {
+        background: "#0D0E2E",
+        text: "#C2ECFE",
+      },
+
       screens: {
         "2xl": "1920px",
       },

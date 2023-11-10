@@ -2,20 +2,16 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 
+import { navigationProps } from "@/interfaces/navigationProps";
+
 import avatar from '@/images/avatar.svg';
 import Image from "next/image";
 
 
-interface navgationProps {
-  name?: string;
-  href?: string;
-  isActivate?: boolean;
-}
-
 export default function NavigationComponent({
   navigation,
 }: {
-  navigation: navgationProps[];
+  navigation: navigationProps[];
 }) {
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -41,7 +37,7 @@ export default function NavigationComponent({
                         href={nav.href}
                         className={clsx(
                           nav.isActivate ? "bg-gray-900" : "bg-gray-800",
-                          "rounded-md mx-2 bg-gray-800 px-3 py-2 text-sm font-medium text-white"
+                          "rounded-md mx-2 text-lg bg-gray-800 px-3 py-2 font-medium text-white"
                         )}
                       >
                         {nav.name}

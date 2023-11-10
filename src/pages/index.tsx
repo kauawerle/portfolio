@@ -1,12 +1,8 @@
 import HeroComponent from "@/components/HeroComponent";
+import ProjectsComponents from "@/components/ProjectsComponent";
 import NavigationComponent from "@/components/navbar";
+import { navigationProps } from "@/interfaces/navigationProps";
 import localFont from "@next/font/local";
-
-interface navigationProps {
-  name?: string;
-  href?: string;
-  isActivate?: boolean;
-}
 
 const cascadia = localFont({
   src: [
@@ -43,6 +39,7 @@ const IndexPage = () => (
     <>
       <NavigationComponent navigation={navigation} />
       <HeroComponent />
+      <ProjectsComponents/>
     </>
   </html>
 );
