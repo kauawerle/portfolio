@@ -3,7 +3,21 @@
 export default function HeroComponent() {
   return (
     <main
-      className={`lg:p-12 font-sans h-[100vh] drop-shadow-lg flex justify-center bg-right-bottom items-center lg:bg-auto lg:bg-no-repeat lg:bg-right lg:bg-[url('images/background-coverfill.svg')] bg-[#0D0E2E]`}
+      className={
+        `lg:p-12
+        font-sans 
+        h-[100vh] 
+        drop-shadow-md 
+        flex 
+        justify-center 
+        bg-right-bottom 
+        items-center 
+        lg:bg-auto 
+        lg:bg-no-repeat 
+        lg:bg-right 
+        lg:bg-[url('images/background-coverfill.svg')] 
+        bg-[#0D0E2E]`
+      }
     >
       <div className="w-full p-5 max-w-none flex items-center justify-center">
         <div className="flex mt-5 mb-5 flex-col text-center lg:text-left max-w-8xl justify-start items-start">

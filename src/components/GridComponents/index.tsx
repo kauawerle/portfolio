@@ -6,6 +6,7 @@ import certificata from "@/images/projects/certificata.png";
 import digitaldoc from "@/images/projects/digitaldoc_logo.png";
 import eatos from "@/images/projects/eatos.png";
 import optimize from "@/images/projects/optimize.jpg";
+import profissional from "@/images/projects/profissionalAAA.png";
 import vipus from "@/images/projects/vipus.png";
 
 const projects: projectProps[] = [
@@ -46,11 +47,10 @@ const projects: projectProps[] = [
   },
   {
     name: "ProfissionalAAA",
-    image: optimize,
-    description:
-      "Portfólio e curso do Profissional AAA em 2023",
-    link: "https://optimize.deals",
-  }
+    image: profissional,
+    description: "Portfólio e curso do Profissional AAA em 2023",
+    link: "https://www.gustavomaciel.xyz",
+  },
 ];
 
 export default function GridComponents() {

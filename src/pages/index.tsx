@@ -1,3 +1,4 @@
+import { AboutComponent } from "@/components/AboutComponent";
 import HeroComponent from "@/components/HeroComponent";
 import ProjectsComponents from "@/components/ProjectsComponent";
 import NavigationComponent from "@/components/navbar";
@@ -39,6 +40,7 @@ const IndexPage = () => (
     <>
       <NavigationComponent navigation={navigation} />
       <HeroComponent />
+      <AboutComponent/>
       <ProjectsComponents/>
     </>
   </html>
