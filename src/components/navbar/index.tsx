@@ -14,10 +14,10 @@ export default function NavigationComponent({
   navigation: navigationProps[];
 }) {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="w-full max-w-none bg-gray-800">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto w-full max-w-none lg:max-w-7xl px-6 lg:px-8">
             <div className="flex h-16 items-center justify-center">
               <div className="flex w-full justify-center items-center">
                 <div className="flex-shrink-0">

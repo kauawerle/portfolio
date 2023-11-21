@@ -54,12 +54,29 @@ const projects: projectProps[] = [
 ];
 
 export default function GridComponents() {
-  console.log(projects);
   return (
     <section className="w-full flex justify-center items-center">
-      <div className="grid grid-cols-3 gap-3 mt-[1.5rem]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-3 mt-[1.5rem]">
         {projects.map((pr) => (
-          <div className="text-white mx-12 mt-8 text-2xl p-12 drop-shadow-md flex flex-col w-[354px] bg-[#0B0D3D] rounded-md text-left hover:bg-[#0F1040] justify-center items-start">
+          <div
+            key={pr.name}
+            className="
+            text-white
+            lg:mx-12
+            mt-8
+            text-2xl
+            p-12
+            drop-shadow-md
+            flex
+            flex-col
+            w-full
+            lg:w-[354px]
+            bg-[#0B0D3D]
+            rounded-md
+            text-left
+            hover:bg-[#0F1040]
+            justify-center
+            items-start">
             <Image
               className="mb-6 rounded-md"
               src={pr.image}

@@ -4,29 +4,43 @@ import Image from "next/image";
 export function AboutComponent() {
   return (
     <section
-      className="py-24 sm:py-32 drop-shadow-md bg-[url('images/background_about.svg')]  
+      className="lg:py-24 py-32 drop-shadow-md bg-[url('images/background_about.svg')]  
         bg-no-repeat bg-background bg-right-bottom "
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div className="mr-7">
+        <div
+          className="
+            lg:grid
+            max-w-2xl
+            flex
+            justify-center
+            flex-col
+            items-center
+            lg:items-start
+            gap-x-8
+            gap-y-16
+            lg:mx-0
+            lg:max-w-none
+            lg:grid-cols-2">
+          <div >
             <Image
               height={556}
               width={512}
               alt=""
+              quality={100}
               src={cover}
               className="h-full rounded-lg w-full object-cover"
             />
           </div>
           <div className="ml-10">
             <div className="text-base font-sofia leading-7 text-text lg:max-w-lg">
-              <p className="text-primary text-xl font-semibold leading-7">
+              <p className="text-primary text-left text-xl font-semibold leading-7">
                 Quem é
               </p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-text sm:text-4xl">
+              <h1 className="mt-2 text-3xl text-left font-bold tracking-tight text-text sm:text-4xl">
                 Kauã Werle
               </h1>
-              <div className="max-w-3xl text-white text-lg font-semibold">
+              <div className="max-w-3xl text-white text-left text-lg font-semibold">
                 <p className="mt-6">
                   Comecei a estudar programação e trabalhar aos 15 anos de
                   idade, cursei técnico em informática do Mondrone em 2019, meu

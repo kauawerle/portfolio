@@ -1,9 +1,10 @@
 import { AboutComponent } from "@/components/AboutComponent";
+import FooterComponent from "@/components/FooterComponent";
 import HeroComponent from "@/components/HeroComponent";
 import ProjectsComponents from "@/components/ProjectsComponent";
-import NavigationComponent from "@/components/navbar";
 import { navigationProps } from "@/interfaces/navigationProps";
 import localFont from "@next/font/local";
+import { useState } from "react";
 
 const cascadia = localFont({
   src: [
@@ -35,15 +36,29 @@ const navigation: navigationProps[] = [
   },
 ];
 
-const IndexPage = () => (
-  <html className={cascadia.variable}>
-    <>
-      <NavigationComponent navigation={navigation} />
-      <HeroComponent />
-      <AboutComponent/>
-      <ProjectsComponents/>
-    </>
-  </html>
-);
+const IndexPage = () => {
+  const [showAboutSection, setShowAboutSection] = useState(false);
 
-export default IndexPage
+  const handleInput = (event) => {
+    const inputValue = event.target.value.toLowerCase();
+    if (inputValue === "yes" || inputValue === "y") {
+      setShowAboutSection(true);
+    } else if (inputValue === "no" || inputValue === "n") {
+      alert("Putz kk")
+    }
+  };
+  return (
+    <html className={cascadia.variable}>
+      <>
+        {/* <NavigationComponent navigation={navigation} /> */}
+        <HeroComponent onInput={handleInput} />
+        {showAboutSection && <AboutComponent />}
+        {showAboutSection && <ProjectsComponents />}
+        {showAboutSection && <FooterComponent />}
+
+      </>
+    </html>
+  );
+};
+
+export default IndexPage;
