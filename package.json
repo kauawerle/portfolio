@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "kauawerle",
+  "homepage": "www.kauawerle.xyz",
   "scripts": {
     "dev": "next",
     "build": "next build",
