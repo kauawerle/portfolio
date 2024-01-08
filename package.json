@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "kauawerle",
-  "homepage": "https://kauawerle.github.io/portfolio",
+  "homepage": "https://portfolio-kaua.onrender.com/",
   "scripts": {
     "dev": "next",
     "build": "next build",
