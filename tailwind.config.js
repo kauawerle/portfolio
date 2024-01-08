@@ -3,7 +3,11 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   important: true,
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
+  purge: [
+    // "./src/**/*.html",
+    // "./src/**/*.vue,
+    // "./src/**/*.jsx"
+  ],
   theme: {
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
