@@ -6,7 +6,10 @@ module.exports = {
   purge: [
     // "./src/**/*.html",
     // "./src/**/*.vue,
-    // "./src/**/*.jsx"
+    "./src/**/*.jsx",
+    "./src/**/*.tsx",
+    "./src/**/*.js",
+    "./src/**/*.ts",
   ],
   theme: {
     fontSize: {
