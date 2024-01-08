@@ -43,6 +43,7 @@ export default function FooterComponent() {
             <div key={item.name} className="pb-6">
               <a
                 href={item.href}
+                target="_blank"
                 className="text-sm leading-6 text-white hover:text-text"
               >
                 {item.name}

@@ -1,10 +1,15 @@
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+
+import localFont from "@next/font/local";
+
 import { AboutComponent } from "@/components/AboutComponent";
 import FooterComponent from "@/components/FooterComponent";
 import HeroComponent from "@/components/HeroComponent";
 import ProjectsComponents from "@/components/ProjectsComponent";
 import { navigationProps } from "@/interfaces/navigationProps";
-import localFont from "@next/font/local";
-import { useState } from "react";
 
 const cascadia = localFont({
   src: [
@@ -42,9 +47,14 @@ const IndexPage = () => {
   const handleInput = (event) => {
     const inputValue = event.target.value.toLowerCase();
     if (inputValue === "yes" || inputValue === "y") {
+      toast.dark("Conquista Desbloqueada! 🚀", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
       setShowAboutSection(true);
     } else if (inputValue === "no" || inputValue === "n") {
-      alert("Putz kk")
+      toast.error("😭😭", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
     }
   };
   return (
@@ -52,10 +62,14 @@ const IndexPage = () => {
       <>
         {/* <NavigationComponent navigation={navigation} /> */}
         <HeroComponent onInput={handleInput} />
-        {showAboutSection && <AboutComponent />}
-        {showAboutSection && <ProjectsComponents />}
-        {showAboutSection && <FooterComponent />}
-
+        <ToastContainer />
+        {showAboutSection && (
+          <React.Suspense fallback={<div>Loading...</div>}>
+            <AboutComponent />
+            <ProjectsComponents />
+            <FooterComponent />
+          </React.Suspense>
+        )}
       </>
     </html>
   );
