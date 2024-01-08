@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   important: true,
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*"],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
@@ -19,17 +19,17 @@ module.exports = {
       "7xl": ["4rem", { lineHeight: "4.5rem" }],
     },
     backgroundPosition: {
-      bottom: 'bottom',
-      'bottom-4': 'center bottom 1rem',
-      center: 'center',
-      left: 'left',
-      'left-bottom': 'left bottom',
-      'left-top': 'left top',
-      right: 'right',
-      'right-bottom': 'right bottom',
-      'right-top': 'right top',
-      top: 'top',
-      'top-4': 'center top 1rem',
+      bottom: "bottom",
+      "bottom-4": "center bottom 1rem",
+      center: "center",
+      left: "left",
+      "left-bottom": "left bottom",
+      "left-top": "left top",
+      right: "right",
+      "right-bottom": "right bottom",
+      "right-top": "right top",
+      top: "top",
+      "top-4": "center top 1rem",
     },
     extend: {
       borderRadius: {
